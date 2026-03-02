@@ -1,2 +1,27 @@
 # The-Secret-Auction-Program
 
+print("welcome to The Secret Auction Program")
+bids ={}
+continue_bidding = True
+def find_highest_bidder(bidders_dict):
+    winner = ""
+    highest_bid=0
+    max(bidders_dict)
+    for bidder in bidders_dict:
+        bid_amount = bidders_dict[bidder]
+        if bid_amount>highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+    print(f"winner is {winner} with a bid of ${highest_bid}")
+
+while continue_bidding:
+
+    name = input("What is your name: ")
+    price = int(input("What's your bid? : $"))
+    bids[name]= price
+    should_continue=input("Are there any other bidders? if yes then type 'yes' else 'no'\n")
+    if should_continue=="no":
+        continue_bidding=False
+        find_highest_bidder(bids)
+
+
